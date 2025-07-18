@@ -34,29 +34,29 @@ export const SpendingSummary = () => {
     <div className="grid gap-4 md:grid-cols-2 lg:grid-cols-4">
       <SummaryCard
         title="Total Spend This Period"
-        value="$12,847"
-        change="+12.5%"
-        trend="up"
+        value="$32,470"
+        change="-11.1%"
+        trend="down"
         icon={<ShoppingCart className="h-4 w-4 text-muted-foreground" />}
       />
       <SummaryCard
         title="Orders Placed"
-        value="47"
-        change="+8.2%"
+        value="164"
+        change="+5.2%"
         trend="up"
         icon={<Package className="h-4 w-4 text-muted-foreground" />}
       />
       <SummaryCard
         title="Average Spend Per Order"
-        value="$273"
-        change="-3.1%"
+        value="$198"
+        change="-15.8%"
         trend="down"
         icon={<TrendingUp className="h-4 w-4 text-muted-foreground" />}
       />
       <SummaryCard
-        title="Estimated Savings"
-        value="$1,240"
-        change="+15.3%"
+        title="Growth Opportunity"
+        value="$2,840"
+        change="+19.0%"
         trend="up"
         icon={<TrendingDown className="h-4 w-4 text-muted-foreground" />}
       />

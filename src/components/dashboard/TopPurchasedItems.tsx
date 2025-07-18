@@ -4,34 +4,34 @@ import { RefreshCw, ShoppingCart } from "lucide-react";
 
 const topItems = [
   {
-    name: "HP 564XL Black Ink Cartridge",
-    spend: "$240",
+    name: "HP LaserJet Toner Cartridge CF410A",
+    spend: "$3,840",
     frequency: "Monthly",
     category: "Ink & Toner"
   },
   {
-    name: "Hammermill Copy Plus Paper",
-    spend: "$180",
+    name: "Purell Advanced Hand Sanitizer Refill",
+    spend: "$2,560",
     frequency: "Bi-weekly", 
+    category: "Personal Care"
+  },
+  {
+    name: "Clorox Healthcare Disinfecting Wipes",
+    spend: "$1,920",
+    frequency: "Weekly",
+    category: "Jan/San Cleaning"
+  },
+  {
+    name: "Georgia-Pacific Copy Paper (Case)",
+    spend: "$1,680",
+    frequency: "Monthly",
     category: "Paper"
   },
   {
-    name: "Quill Brand Pens (12-pack)",
-    spend: "$156",
-    frequency: "Monthly",
-    category: "Office Supplies"
-  },
-  {
-    name: "Lysol Disinfecting Wipes",
-    spend: "$134",
-    frequency: "Weekly",
-    category: "Cleaning"
-  },
-  {
-    name: "Post-it Notes Variety Pack",
-    spend: "$98",
-    frequency: "Monthly",
-    category: "Office Supplies"
+    name: "Tork Universal Paper Towels",
+    spend: "$1,240",
+    frequency: "Bi-weekly",
+    category: "Jan/San Cleaning"
   }
 ];
 

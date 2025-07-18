@@ -5,28 +5,28 @@ import { ExternalLink } from "lucide-react";
 
 const sponsoredProducts = [
   {
-    product: "EcoPro Disinfecting Wipes",
-    category: "Cleaning",
-    vendor: "GreenCo Supplies",
-    note: "Trusted by 200+ clinics",
-    price: "$24.99",
-    originalPrice: "$29.99"
-  },
-  {
-    product: "ProTech Wireless Mouse",
-    category: "Technology", 
-    vendor: "TechFlow",
-    note: "Best-seller in ergonomics",
+    product: "MedSafe Nitrile Gloves",
+    category: "Personal Care",
+    vendor: "SafetyFirst Medical",
+    note: "Powder-free, latex-free protection",
     price: "$18.99",
-    originalPrice: "$25.99"
+    originalPrice: "$24.99"
   },
   {
-    product: "UltraSharp Mechanical Pencils",
-    category: "Office Supplies",
-    vendor: "WriteWell Co",
-    note: "Preferred by architects",
-    price: "$12.99",
-    originalPrice: "$16.99"
+    product: "BioShield Surface Disinfectant",
+    category: "Jan/San Cleaning", 
+    vendor: "CleanTech Solutions",
+    note: "EPA-approved for healthcare facilities",
+    price: "$32.99",
+    originalPrice: "$39.99"
+  },
+  {
+    product: "FlexiCart Mobile Workstation",
+    category: "Healthcare Equipment",
+    vendor: "MedEquip Pro",
+    note: "Height-adjustable healthcare cart",
+    price: "$449.99",
+    originalPrice: "$529.99"
   }
 ];
 

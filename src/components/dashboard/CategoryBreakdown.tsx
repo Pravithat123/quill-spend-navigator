@@ -2,11 +2,11 @@ import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { PieChart, Pie, Cell, ResponsiveContainer, Tooltip } from "recharts";
 
 const data = [
-  { name: "Office Supplies", value: 4200, color: "#3b82f6" },
-  { name: "Technology", value: 3100, color: "#8b5cf6" },
-  { name: "Cleaning", value: 2400, color: "#10b981" },
-  { name: "Paper", value: 1800, color: "#f59e0b" },
-  { name: "Ink & Toner", value: 1347, color: "#ef4444" },
+  { name: "Ink & Toner", value: 11600, color: "#3b82f6" },
+  { name: "Jan/San Cleaning", value: 7700, color: "#8b5cf6" },
+  { name: "Paper", value: 7400, color: "#10b981" },
+  { name: "Breakroom", value: 3600, color: "#f59e0b" },
+  { name: "Personal Care", value: 2170, color: "#ef4444" },
 ];
 
 

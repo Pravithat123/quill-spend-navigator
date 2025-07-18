@@ -5,25 +5,25 @@ import { ArrowRight, Star } from "lucide-react";
 
 const recommendations = [
   {
-    currentProduct: "Bounty Paper Towels",
-    quillAlternative: "Quill Select Paper Towels",
-    savings: "$3.50",
-    savingsPercent: "15%",
-    rating: 4.5
+    currentProduct: "Purell Advanced Hand Sanitizer",
+    quillAlternative: "Quill Healthcare Hand Sanitizer",
+    savings: "$18.50",
+    savingsPercent: "35%",
+    rating: 4.8
   },
   {
-    currentProduct: "Staples Sticky Notes", 
-    quillAlternative: "Quill Brand Sticky Notes",
-    savings: "$2.25",
-    savingsPercent: "20%",
+    currentProduct: "HP Original Toner Cartridge", 
+    quillAlternative: "Quill Compatible Toner",
+    savings: "$45.00",
+    savingsPercent: "40%",
+    rating: 4.6
+  },
+  {
+    currentProduct: "Clorox Disinfecting Wipes",
+    quillAlternative: "Quill Medical-Grade Wipes",
+    savings: "$12.25",
+    savingsPercent: "28%",
     rating: 4.7
-  },
-  {
-    currentProduct: "3M Scotch Tape",
-    quillAlternative: "Quill Clear Tape",
-    savings: "$1.80",
-    savingsPercent: "12%",
-    rating: 4.3
   }
 ];
 
