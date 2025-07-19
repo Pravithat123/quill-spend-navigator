@@ -1,0 +1,25 @@
+Category,Current Month Sales,Previous Month Sales,YoY Change,Top Product,Units Sold,Avg Order Value
+Ink & Toner,$968000,$1089000,-11.1%,HP LaserJet Toner CF410A,1250,$156
+Jan/San Cleaning,$641000,$720000,-11.0%,Purell Hand Sanitizer Refill,890,$142
+Paper,$616000,$689000,-10.7%,Georgia-Pacific Copy Paper,760,$128
+Breakroom,$300000,$336000,-10.6%,Coffee Supplies,420,$95
+Print Shop,$189000,$231000,-18.0%,Banner Materials,156,$203
+Personal Care,$67000,$56300,+19.0%,Nitrile Gloves,890,$87
+Computers,$176000,$147000,+20.0%,Desktop Monitors,45,$450
+Audio/Video,$49000,$42400,+15.6%,Conference Equipment,23,$380
+Gift Cards,$142000,$131000,+8.1%,Visa Gift Cards,284,$125
+Shipping Supplies,$228000,$223000,+2.4%,Boxes & Packaging,670,$78
+
+Product Name,Category,Monthly Spend,Purchase Frequency,Recommended Alternative,Potential Savings
+HP LaserJet Toner Cartridge CF410A,Ink & Toner,$3840,Monthly,Quill Compatible Toner,$45.00
+Purell Advanced Hand Sanitizer Refill,Personal Care,$2560,Bi-weekly,Quill Healthcare Sanitizer,$18.50
+Clorox Healthcare Disinfecting Wipes,Jan/San Cleaning,$1920,Weekly,Quill Medical-Grade Wipes,$12.25
+Georgia-Pacific Copy Paper,Paper,$1680,Monthly,Quill Premium Copy Paper,$8.75
+Tork Universal Paper Towels,Jan/San Cleaning,$1240,Bi-weekly,Quill Universal Towels,$6.50
+
+Rewards Member,Total Annual Spend,Tier Level,Rewards Earned,Next Tier Threshold
+Healthcare Facility A,$296160,Platinum,$5923,$50000
+Healthcare Facility B,$189420,Gold,$3788,$100000
+Healthcare Facility C,$156780,Silver,$3135,$50000
+Healthcare Facility D,$98450,Bronze,$1969,$25000
+Healthcare Facility E,$67890,Bronze,$1358,$25000
