@@ -1,0 +1,253 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Your Healthcare Spend Navigator Report</title>
+    <style>
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            line-height: 1.6;
+            color: #333;
+            margin: 0;
+            padding: 0;
+            background-color: #f8fafc;
+        }
+        
+        .email-container {
+            max-width: 600px;
+            margin: 0 auto;
+            background: white;
+            border: 1px solid #e2e8f0;
+        }
+        
+        .header {
+            background: linear-gradient(135deg, #1e40af, #3b82f6);
+            color: white;
+            padding: 30px;
+            text-align: center;
+        }
+        
+        .logo {
+            font-size: 24px;
+            font-weight: bold;
+            margin-bottom: 10px;
+        }
+        
+        .header-subtitle {
+            font-size: 16px;
+            opacity: 0.9;
+        }
+        
+        .content {
+            padding: 30px;
+        }
+        
+        .greeting {
+            font-size: 18px;
+            margin-bottom: 20px;
+            color: #1e40af;
+        }
+        
+        .highlight-box {
+            background: linear-gradient(135deg, #fef3c7, #fde68a);
+            border-left: 4px solid #f59e0b;
+            padding: 20px;
+            margin: 25px 0;
+            border-radius: 0 8px 8px 0;
+        }
+        
+        .metrics-row {
+            display: flex;
+            justify-content: space-between;
+            margin: 25px 0;
+            background: #f8fafc;
+            padding: 20px;
+            border-radius: 8px;
+        }
+        
+        .metric {
+            text-align: center;
+            flex: 1;
+        }
+        
+        .metric-value {
+            font-size: 24px;
+            font-weight: bold;
+            color: #1e40af;
+            display: block;
+        }
+        
+        .metric-label {
+            font-size: 12px;
+            color: #666;
+            margin-top: 5px;
+        }
+        
+        .cta-button {
+            display: inline-block;
+            background: linear-gradient(135deg, #1e40af, #3b82f6);
+            color: white;
+            padding: 15px 30px;
+            text-decoration: none;
+            border-radius: 8px;
+            font-weight: 600;
+            margin: 20px 0;
+            text-align: center;
+        }
+        
+        .attachment-notice {
+            background: #dbeafe;
+            border: 1px solid #93c5fd;
+            padding: 15px;
+            border-radius: 8px;
+            margin: 20px 0;
+        }
+        
+        .attachment-icon {
+            display: inline-block;
+            margin-right: 8px;
+            font-size: 16px;
+        }
+        
+        .recommendations {
+            background: #f0f9ff;
+            padding: 20px;
+            border-radius: 8px;
+            margin: 20px 0;
+        }
+        
+        .recommendations h3 {
+            margin-top: 0;
+            color: #1e40af;
+        }
+        
+        .recommendations ul {
+            margin: 0;
+            padding-left: 20px;
+        }
+        
+        .recommendations li {
+            margin-bottom: 8px;
+        }
+        
+        .footer {
+            background: #f8fafc;
+            padding: 25px;
+            border-top: 1px solid #e2e8f0;
+            font-size: 14px;
+            color: #666;
+        }
+        
+        .contact-info {
+            background: white;
+            border: 1px solid #e2e8f0;
+            padding: 15px;
+            border-radius: 8px;
+            margin-top: 15px;
+        }
+        
+        .divider {
+            height: 1px;
+            background: #e2e8f0;
+            margin: 30px 0;
+        }
+        
+        @media (max-width: 600px) {
+            .metrics-row {
+                flex-direction: column;
+                gap: 15px;
+            }
+            
+            .content {
+                padding: 20px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="email-container">
+        <div class="header">
+            <div class="logo">Quill Rewards+</div>
+            <div class="header-subtitle">Healthcare Spend Navigator Report</div>
+        </div>
+        
+        <div class="content">
+            <div class="greeting">
+                Hello Healthcare Administrator,
+            </div>
+            
+            <p>Your monthly Healthcare Spend Navigator report for <strong>January 2025</strong> is ready! We've analyzed your procurement data to identify cost-saving opportunities and spending trends specific to your healthcare facility.</p>
+            
+            <div class="highlight-box">
+                <strong>🎯 Key Insight This Month:</strong><br>
+                We've identified <strong>$3,847 in potential savings</strong> through smart product substitutions and volume discounts. Your facility is well-positioned to optimize costs while maintaining quality standards.
+            </div>
+            
+            <div class="metrics-row">
+                <div class="metric">
+                    <span class="metric-value">$32,489</span>
+                    <div class="metric-label">Total Monthly Spend</div>
+                </div>
+                <div class="metric">
+                    <span class="metric-value">$3,847</span>
+                    <div class="metric-label">Potential Savings</div>
+                </div>
+                <div class="metric">
+                    <span class="metric-value">47</span>
+                    <div class="metric-label">Orders Placed</div>
+                </div>
+            </div>
+            
+            <div class="attachment-notice">
+                <span class="attachment-icon">📎</span>
+                <strong>Attached:</strong> Complete Healthcare Spend Navigator Report (PDF)<br>
+                <small>This comprehensive report includes detailed analytics, category breakdowns, and personalized recommendations for your facility.</small>
+            </div>
+            
+            <div class="recommendations">
+                <h3>Top Recommendations for Your Facility:</h3>
+                <ul>
+                    <li><strong>Switch to Quill Brand Toner:</strong> Save up to 30% on ink and laser cartridges</li>
+                    <li><strong>Bulk Hand Sanitizer Program:</strong> Reduce cost per ounce by 40% with gallon refills</li>
+                    <li><strong>Healthcare Contract Pricing:</strong> You qualify for preferred healthcare facility rates</li>
+                    <li><strong>Auto-Delivery Setup:</strong> Secure 15% ongoing discount on cleaning supplies</li>
+                </ul>
+            </div>
+            
+            <div style="text-align: center;">
+                <a href="#" class="cta-button">View Interactive Dashboard</a>
+            </div>
+            
+            <div class="divider"></div>
+            
+            <h3 style="color: #1e40af;">What's Next?</h3>
+            <p>Your dedicated Healthcare Account Manager is ready to help you implement these savings opportunities. Schedule a consultation to review your custom pricing options and discuss upcoming procurement needs.</p>
+            
+            <p><strong>Questions about this report?</strong> Our Healthcare Specialist team is here to help you maximize your facility's procurement efficiency.</p>
+            
+            <div class="contact-info">
+                <strong>Your Healthcare Account Team</strong><br>
+                📞 Direct Line: 1-800-437-1281<br>
+                📧 Email: healthcare.team@quill.com<br>
+                🕒 Available: Monday-Friday, 8 AM - 6 PM EST
+            </div>
+        </div>
+        
+        <div class="footer">
+            <p><strong>Quill Rewards+ Healthcare Program</strong></p>
+            <p>Account #: 8418503 | Reward ID: 506769011</p>
+            <p>You're receiving this email because you're enrolled in our Healthcare Spend Navigator program. To modify your email preferences or unsubscribe, <a href="#">click here</a>.</p>
+            
+            <p style="margin-top: 20px; font-size: 12px; color: #999;">
+                This email contains confidential business information intended solely for Account #8418503. If you received this email in error, please delete it immediately and contact us at healthcare.team@quill.com.
+            </p>
+            
+            <p style="margin-top: 15px; font-size: 12px; color: #999;">
+                © 2025 Quill Corporation. All rights reserved.<br>
+                100 Schelter Road, Lincolnshire, IL 60069
+            </p>
+        </div>
+    </div>
+</body>
+</html>
