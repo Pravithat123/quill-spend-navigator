@@ -1,6 +1,7 @@
 import { Button } from "@/components/ui/button";
 import { Badge } from "@/components/ui/badge";
 import { Calendar, Download, Mail, Settings } from "lucide-react";
+import { AccountNavigation } from "./AccountNavigation";
 
 export const DashboardHeader = () => {
   return (
@@ -16,7 +17,7 @@ export const DashboardHeader = () => {
         </div>
       </div>
       
-      <div className="flex gap-2">
+      <div className="flex items-center gap-2">
         <Button variant="outline" size="sm">
           <Calendar className="h-4 w-4 mr-2" />
           Change Period
@@ -33,6 +34,7 @@ export const DashboardHeader = () => {
           <Settings className="h-4 w-4 mr-2" />
           Settings
         </Button>
+        <AccountNavigation />
       </div>
     </div>
   );
