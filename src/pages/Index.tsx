@@ -1,45 +1,43 @@
 import { DashboardHeader } from "@/components/dashboard/DashboardHeader";
-import { SpendingSummary } from "@/components/dashboard/SpendingSummary";
-import { SpendTrendChart } from "@/components/dashboard/SpendTrendChart";
+import { BudgetOverview } from "@/components/dashboard/BudgetOverview";
 import { CategoryBreakdown } from "@/components/dashboard/CategoryBreakdown";
 import { TopPurchasedItems } from "@/components/dashboard/TopPurchasedItems";
 import { SmartRecommendations } from "@/components/dashboard/SmartRecommendations";
 import { SponsoredPicks } from "@/components/dashboard/SponsoredPicks";
+import { SmartAlerts } from "@/components/dashboard/SmartAlerts";
+import { RewardsPlus } from "@/components/dashboard/RewardsPlus";
+import { SpendTrendChart } from "@/components/dashboard/SpendTrendChart";
 
 const Index = () => {
   return (
     <div className="min-h-screen bg-background">
-      <div className="container mx-auto px-4 py-8">
+      <div className="container mx-auto px-4 py-8 max-w-7xl">
         <DashboardHeader />
         
-        {/* Summary Cards */}
-        <SpendingSummary />
+        {/* Budget Overview - Primary Focus */}
+        <BudgetOverview />
         
-        {/* Charts Section */}
-        <div className="grid gap-4 md:grid-cols-8 mt-8">
-          <SpendTrendChart />
-          <CategoryBreakdown />
-          <TopPurchasedItems />
+        {/* Main Dashboard Grid */}
+        <div className="grid gap-6 lg:grid-cols-12 mt-8">
+          {/* Left Column - Budget Details */}
+          <div className="lg:col-span-8 space-y-6">
+            <CategoryBreakdown />
+            <SpendTrendChart />
+          </div>
+          
+          {/* Right Column - Alerts & Recommendations */}
+          <div className="lg:col-span-4 space-y-6">
+            <SmartAlerts />
+            <RewardsPlus />
+          </div>
         </div>
         
         {/* Recommendations Section */}
-        <div className="grid gap-4 md:grid-cols-2 mt-8">
+        <div className="grid gap-6 lg:grid-cols-2 mt-8">
           <SmartRecommendations />
-          <SponsoredPicks />
-        </div>
-        
-        {/* Footer */}
-        <div className="mt-12 p-6 bg-muted/30 rounded-lg">
-          <h3 className="font-semibold mb-2">FAQ & Support</h3>
-          <div className="grid md:grid-cols-2 gap-4 text-sm text-muted-foreground">
-            <div>
-              <p><strong>How do I opt in/out?</strong></p>
-              <p>Visit your account settings to manage email preferences and report frequency.</p>
-            </div>
-            <div>
-              <p><strong>How are recommendations made?</strong></p>
-              <p>Our AI analyzes your purchase history to suggest cost-effective alternatives.</p>
-            </div>
+          <div className="space-y-6">
+            <TopPurchasedItems />
+            <SponsoredPicks />
           </div>
         </div>
       </div>

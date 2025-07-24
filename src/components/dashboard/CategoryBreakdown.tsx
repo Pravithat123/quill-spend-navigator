@@ -1,68 +1,97 @@
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
-import { PieChart, Pie, Cell, ResponsiveContainer, Tooltip } from "recharts";
+import { Button } from "@/components/ui/button";
+import { Badge } from "@/components/ui/badge";
+import { Progress } from "@/components/ui/progress";
+import { AlertTriangle, CheckCircle, TrendingDown, Plus } from "lucide-react";
 
-const data = [
-  { name: "Ink & Toner", value: 11600, color: "#3b82f6" },
-  { name: "Jan/San Cleaning", value: 7700, color: "#8b5cf6" },
-  { name: "Paper", value: 7400, color: "#10b981" },
-  { name: "Breakroom", value: 3600, color: "#f59e0b" },
-  { name: "Personal Care", value: 2170, color: "#ef4444" },
+interface CategoryData {
+  name: string;
+  spend: number;
+  budget: number;
+  status: "good" | "warning" | "danger";
+  trend: "up" | "down" | "stable";
+}
+
+const categoryData: CategoryData[] = [
+  { name: "Personal Care", spend: 8240, budget: 10000, status: "good", trend: "stable" },
+  { name: "Janitorial & Cleaning", spend: 7650, budget: 9000, status: "warning", trend: "up" },
+  { name: "Office Supplies", spend: 5480, budget: 8000, status: "good", trend: "down" },
+  { name: "Medical Supplies", spend: 4320, budget: 7000, status: "good", trend: "stable" },
+  { name: "Safety Equipment", spend: 3890, budget: 5000, status: "good", trend: "up" },
+  { name: "Food Service", spend: 2890, budget: 4000, status: "good", trend: "stable" },
 ];
 
-
 export const CategoryBreakdown = () => {
+  const getStatusIcon = (status: string) => {
+    switch (status) {
+      case "danger":
+        return <AlertTriangle className="h-4 w-4 text-red-500" />;
+      case "warning":
+        return <AlertTriangle className="h-4 w-4 text-yellow-500" />;
+      default:
+        return <CheckCircle className="h-4 w-4 text-green-500" />;
+    }
+  };
+
   return (
-    <Card className="col-span-3">
-      <CardHeader>
-        <CardTitle>Spend by Category</CardTitle>
+    <Card className="md:col-span-4">
+      <CardHeader className="flex flex-row items-center justify-between">
+        <CardTitle>Budget by Category</CardTitle>
+        <Button variant="outline" size="sm">
+          <Plus className="h-4 w-4 mr-2" />
+          Add Category
+        </Button>
       </CardHeader>
       <CardContent>
-        <ResponsiveContainer width="100%" height={300}>
-          <PieChart>
-            <Pie
-              data={data}
-              cx="50%"
-              cy="50%"
-              labelLine={false}
-              label={({ name, percent }) => `${name} ${(percent * 100).toFixed(0)}%`}
-              outerRadius={80}
-              fill="#8884d8"
-              dataKey="value"
-            >
-              {data.map((entry, index) => (
-                <Cell key={`cell-${index}`} fill={entry.color} />
-              ))}
-            </Pie>
-            <Tooltip 
-              content={({ active, payload }) => {
-                if (active && payload && payload.length) {
-                  return (
-                    <div className="bg-background border rounded-lg shadow-md p-3">
-                      <p className="text-sm font-medium">{payload[0].name}</p>
-                      <p className="text-sm text-primary">
-                        ${payload[0].value?.toLocaleString()}
-                      </p>
+        <div className="space-y-6">
+          {categoryData.map((category) => {
+            const percentage = (category.spend / category.budget) * 100;
+            const remaining = category.budget - category.spend;
+            
+            return (
+              <div key={category.name} className="space-y-3">
+                <div className="flex items-center justify-between">
+                  <div className="flex items-center gap-2">
+                    {getStatusIcon(category.status)}
+                    <span className="font-medium">{category.name}</span>
+                    {category.trend === "up" && (
+                      <Badge variant="outline" className="text-xs">↗ Trending up</Badge>
+                    )}
+                    {category.trend === "down" && (
+                      <Badge variant="outline" className="text-xs">↘ Trending down</Badge>
+                    )}
+                  </div>
+                  <div className="text-right">
+                    <div className="font-semibold">
+                      ${category.spend.toLocaleString()}
                     </div>
-                  );
-                }
-                return null;
-              }}
-            />
-          </PieChart>
-        </ResponsiveContainer>
-        <div className="mt-4 space-y-2">
-          {data.map((item) => (
-            <div key={item.name} className="flex items-center justify-between">
-              <div className="flex items-center gap-2">
-                <div 
-                  className="w-3 h-3 rounded-full" 
-                  style={{ backgroundColor: item.color }}
-                />
-                <span className="text-sm">{item.name}</span>
+                    <div className="text-xs text-muted-foreground">
+                      of ${category.budget.toLocaleString()}
+                    </div>
+                  </div>
+                </div>
+                
+                <div className="space-y-2">
+                  <Progress 
+                    value={percentage} 
+                    className="h-3"
+                  />
+                  <div className="flex items-center justify-between text-sm">
+                    <span className="text-muted-foreground">
+                      {percentage.toFixed(1)}% used
+                    </span>
+                    <span className={remaining > 0 ? "text-green-600" : "text-red-600"}>
+                      ${Math.abs(remaining).toLocaleString()} {remaining > 0 ? "remaining" : "over budget"}
+                    </span>
+                  </div>
+                </div>
               </div>
-              <span className="text-sm font-medium">${item.value.toLocaleString()}</span>
-            </div>
-          ))}
+            );
+          })}
+          
+          <Button variant="ghost" className="w-full text-sm">
+            View detailed breakdown
+          </Button>
         </div>
       </CardContent>
     </Card>
